@@ -8,9 +8,18 @@ var Question = React.createClass({
 
     return (
         <div>
-          <div>
-          {questions[questionIndex].question}
+          <div className='questionContainer'>
+            <div>
+              <p>{questions[questionIndex].question}</p>
+            </div>
+            <div>
+              <p>Agree</p>
+              <p>Slightly agree</p>
+              <p>slightly disagree</p>
+              <p>disagree</p>
+            </div>
         </div>
+
         <Answers questionIndex={questionIndex}></Answers>
         </div>
     )
@@ -19,7 +28,7 @@ var Question = React.createClass({
     return (
       <div className="row">
 
-          Question {questionIndex + 1}
+        <p>Question {questionIndex + 1}</p>
           {questionRender(someData)}
 
       </div>

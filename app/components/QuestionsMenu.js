@@ -20,7 +20,7 @@ var QuestionMenu = React.createClass({
   render:function(){
     return (
       <div className="row">
-        <div className="text-center column small-centered medium-6 large-4">
+        <div className="text-center column small-centered medium-10 large-8">
           <Question questionIndex={this.state.numberOfQuestion}></Question>
           <button className="button success expanded" onClick={this.handleNextPage}>Next</button>
         </div>

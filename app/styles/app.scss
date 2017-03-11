@@ -15,8 +15,45 @@
 
 .answer {
   display: flex;
-  flex-direction: column;
+
   div {
     text-align: left;
+  }
+  p{
+    width: 30%;
+    padding: 1rem;
+  }
+  .answerContainer {
+    width:70%;
+    display: flex;
+    align-items: center;
+
+  }
+  input[type=radio] , .answerOptions {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+}
+
+.questionContainer {
+  display: flex;
+  align-items: center;
+
+
+  div:nth-child(1) {
+    width: 30%;
+    p {
+      padding: 2rem;
+    }
+  }
+  div:nth-child(2) {
+    width: 70%;
+    display:flex;
+    p {
+      width: 25%;
+      flex-grow: 1;
+      padding:1rem;
+
+    }
   }
 }
