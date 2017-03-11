@@ -1,0 +1,22 @@
+@import 'base/variables';
+
+
+//Foundation
+@import 'base/foundation-settings';
+@import 'foundation';
+@include foundation-everything;
+
+
+// Components
+
+.active {
+  font-weight: bold;
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  div {
+    text-align: left;
+  }
+}
