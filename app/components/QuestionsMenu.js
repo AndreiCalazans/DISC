@@ -2,6 +2,7 @@ import React from 'react';
 import {someData} from '../database/questionDb';
 
 import Question from 'Question';
+import Result from 'Result';
 
 var QuestionMenu = React.createClass({
   getInitialState: function() {
@@ -9,9 +10,9 @@ var QuestionMenu = React.createClass({
       numberOfQuestion: 0
     }
   },
-  handleNextPage: function() {
+  setNextPage: function () {
     let preValue = this.state.numberOfQuestion;
-    if(preValue  < someData.length - 1){
+    if (someData.length - 1 > preValue){
       this.setState({
         numberOfQuestion: preValue + 1
       })
@@ -21,8 +22,8 @@ var QuestionMenu = React.createClass({
     return (
       <div className="row">
         <div className="text-center column small-centered medium-10 large-8">
-          <Question questionIndex={this.state.numberOfQuestion}></Question>
-          <button className="button success expanded" onClick={this.handleNextPage}>Next</button>
+          <Question questionIndex={this.state.numberOfQuestion} passNextPage={this.setNextPage}></Question>
+
         </div>
       </div>
     )

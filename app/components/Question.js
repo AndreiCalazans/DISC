@@ -3,6 +3,9 @@ import {someData} from '../database/questionDb';
 import Answers from 'Answers';
 
 var Question = React.createClass({
+  handleNextPage: function() {
+    this.props.passNextPage();
+  },
   render:function(){
     const questionRender = (questions) => {
 
@@ -10,17 +13,17 @@ var Question = React.createClass({
         <div>
           <div className='questionContainer'>
             <div>
-              <p>{questions[questionIndex].question}</p>
+              <p>{questions[questionIndex].mainQuestion}</p>
             </div>
             <div>
-              <p>Agree</p>
-              <p>Slightly agree</p>
-              <p>slightly disagree</p>
-              <p>disagree</p>
+              <p>raramente</p>
+              <p>ocasionalmente</p>
+              <p>Muitas vezes</p>
+              <p>Maioria da vezes</p>
             </div>
         </div>
 
-        <Answers questionIndex={questionIndex}></Answers>
+        <Answers questionIndex={questionIndex} handleNextPage={this.handleNextPage} questions={someData}></Answers>
         </div>
     )
     };

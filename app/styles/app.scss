@@ -13,27 +13,7 @@
   font-weight: bold;
 }
 
-.answer {
-  display: flex;
 
-  div {
-    text-align: left;
-  }
-  p{
-    width: 30%;
-    padding: 1rem;
-  }
-  .answerContainer {
-    width:70%;
-    display: flex;
-    align-items: center;
-
-  }
-  input[type=radio] , .answerOptions {
-    flex-grow: 1;
-    padding: 1rem;
-  }
-}
 
 .questionContainer {
   display: flex;

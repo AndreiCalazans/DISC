@@ -4,7 +4,7 @@ import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 import Main from 'Main';
 import Home from 'Home';
 import QuestionsMenu from 'QuestionsMenu';
-
+import Result from 'Result';
 
 //Load foundations-sites
 // require("foundation-sites/dist/css/foundation.min.css");
@@ -19,6 +19,7 @@ ReactDOM.render(
     <Route path="/" component={Main}>
       <IndexRoute component={Home}></IndexRoute>
       <Route path='/questions' component={QuestionsMenu}></Route>
+      <Route path='/result' component={Result}></Route>
     </Route>
   </Router>,
   document.getElementById('app')
