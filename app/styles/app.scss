@@ -8,6 +8,10 @@
 
 
 // Components
+* , *:before , *:after {
+  margin: 0;
+
+}
 
 .active {
   font-weight: bold;
@@ -22,18 +26,50 @@
 
   div:nth-child(1) {
     width: 30%;
+    box-sizing: border-box;
     p {
-      padding: 2rem;
+      padding: 1rem;
     }
   }
   div:nth-child(2) {
     width: 70%;
     display:flex;
+    box-sizing: border-box;
     p {
       width: 25%;
       flex-grow: 1;
       padding:1rem;
-
+      font-size: 10px;
     }
+  }
+}
+
+.answerContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+
+  div {
+    width:100%;
+  }
+  div:nth-child(1) , div:nth-child(3) {
+    background-color: #efefef;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    p {
+      box-sizing: border-box;
+      width: 45%;
+      padding: 1rem;
+      font-size: 10px;
+    }
+  }
+  label input {
+    box-sizing: border-box;
+    width: 25%;
+    flex-grow: 1;
+    padding:1rem;
+
   }
 }
