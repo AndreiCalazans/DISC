@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
+import {Link} from 'react-router';
 export const Result = React.createClass({
   render () {
     var {w , x , y , z} = this.props;
@@ -29,12 +29,14 @@ export const Result = React.createClass({
     }).forEach((e) => {
       return answer = answer.concat(e[0]);
     });
-    return <h1>You are {answer.toUpperCase()}</h1>
+    return <h1>Voçe é um <span style={{color: 'red'}}> {answer.toUpperCase()}</span></h1>
     };
     return (
-      <div>
-        <h1>The result is </h1>
+      <div >
         {calculateDisc()}
+        <div>
+          <Link to='/disc'>aprenda sobre os diferentes comportamentos</Link>
+        </div>
       </div>
     )
   }

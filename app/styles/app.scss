@@ -5,20 +5,43 @@
 @import 'base/foundation-settings';
 @import 'foundation';
 @include foundation-everything;
-
-
+@import 'components/Landing';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
 // Components
 * , *:before , *:after {
   margin: 0;
 
 }
+.top-bar {
+   box-shadow: 2px 0px 6px 1px rgba(0,0,0,0.5);
+  z-index: 1;
+  position: relative;
+  background-color: #00796B;
+  color:white;
+}
+.top-bar .top-bar-left {
+  width: auto;
+}
+.top-bar-left {
+  float:none;
+  ul {
+    background-color: #00796B;
+    }
+}
 
+.menu li a {
+  color: white;
+}
 .active {
   font-weight: bold;
 }
 
 
-
+.mainContainer {
+  position: relative;
+  z-index:1;
+  margin: 20px;
+}
 .questionContainer {
   display: flex;
   align-items: center;
@@ -40,10 +63,14 @@
       flex-grow: 1;
       padding:1rem;
       font-size: 10px;
+      overflow: visible;
     }
   }
 }
-
+.card {
+  margin: 20px;
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,0.5);
+}
 .answerContainer {
   display:flex;
   align-items: center;

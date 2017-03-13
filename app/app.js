@@ -6,7 +6,7 @@ import Home from 'Home';
 import QuestionsMenu from 'QuestionsMenu';
 import {Provider} from 'react-redux';
 import {someData} from './database/questionDb';
-
+import Disc from 'Disc';
 
 import * as actions from './actions/actions';
 // var actions = require('./actions/actions');
@@ -34,6 +34,7 @@ ReactDOM.render(
       <Route path="/" component={Main}>
         <IndexRoute component={Home}></IndexRoute>
         <Route path='/questions' component={QuestionsMenu}></Route>
+        <Route path='/disc' component={Disc}></Route>
       </Route>
     </Router>
 </Provider>,

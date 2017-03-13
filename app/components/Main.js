@@ -4,7 +4,24 @@ var Main = React.createClass({
   render: function() {
     return (
       <div>
-        <Link to='/'>Home</Link>
+        <div className="top-bar">
+          <div className="top-bar-title">
+            <p>DISC</p>
+          </div>
+          <div className="top-bar-left ">
+            <ul className='menu'>
+              <li>
+                <Link to='#'>Home</Link>
+              </li>
+              <li>
+                <Link to='/questions'>Teste</Link>
+              </li>
+              <li>
+                <Link to='/disc'>Sobre o DISC</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         {this.props.children}
       </div>
     )

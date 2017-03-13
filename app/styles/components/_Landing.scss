@@ -1,0 +1,56 @@
+.landingImg {
+  background-image: url('http://www.abetterinterview.com/wp-content/uploads/2014/08/self-discovery.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  z-index:0;
+
+
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  top: 150px;
+  height: 50px;
+   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+footer {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%
+}
+.callout {
+  margin: 10px;
+}
+.btn {
+  display: inline-block;
+      position: relative;
+      width: 120px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 0.9em;
+      background-color: #0f9d58;
+     color: #fff;
+}
+.landing-text {
+  position: relative;
+  top: 80px;
+  color: white;
+  font-family: 'Playfair Display SC', serif;
+  background-color: rgba(0,0,0,0.5);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}

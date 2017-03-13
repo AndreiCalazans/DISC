@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-
+process.env.NODE_ENV= process.env.NODE_ENV || 'development';
 module.exports = {
   entry: [
     "script-loader!jquery/dist/jquery.js",
@@ -66,5 +66,5 @@ module.exports = {
         }
   ]
 },
-devtool: 'cheap-module-eval-source-map'
+devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-eval-source-map'
 };
