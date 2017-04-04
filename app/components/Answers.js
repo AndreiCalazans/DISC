@@ -4,12 +4,17 @@ import {connect} from 'react-redux';
 import AnswerForm from 'answerForm';
 import * as actions from '../actions/actions';
 import {questions} from '../database/questionDb';
+
 var dispatch ;
 import Result from 'Result';
+
+
+
+
 var Answer = React.createClass({
-  handleValues: function (e ) {
+  handleValues: function (e) {
     e.preventDefault();
-    var {dispatch } = this.props;
+    var {dispatch , index } = this.props;
 
     var inputs = document.querySelectorAll('input:checked');
     this.computeResults(inputs , dispatch );
@@ -39,6 +44,9 @@ var Answer = React.createClass({
     };
     return (
       <div className="answer">
+        <div id='progressBar'>
+          {index+'/15'}
+        </div>
         {renderBody()}
       </div>
     )

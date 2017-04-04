@@ -1,18 +1,24 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {questions} from '../database/questionDb';
+
+
+
+
 var AnswerForm = React.createClass({
   render() {
     var {index , handleValues, dispatch} = this.props;
+
     const renderButton = () => {
       if(index === 14) {
-        return <button className="button">Resultado</button>;
+        return <input type='submit' className="button" value='Resultado'/>;
       }else {
-        return <button className="button">Proxima questão</button>;
+        return <input type='submit' className="button" value='Proxima questão'/>;
       }
     };
     return (
       <div>
+
         <div className='questionContainer'>
           <div>
             <p>{questions[index].mainQuestion}</p>

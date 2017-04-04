@@ -1,0 +1,27 @@
+#progressBar {
+  margin:20px;
+  position: relative;
+  width:90%;
+  height: 3px;
+  background: lightgrey;
+}
+#progressBar:before {
+  content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    color: green;
+    width: 0;
+    height: 10px;
+    z-index: 2;
+    background: #00796B;
+    transition: all 0.2s;
+}
+#progressBar:after {
+  right: -40px;
+  top: -10px;
+  content: '20%';
+  position:absolute;
+  color: black;
+
+}
