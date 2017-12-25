@@ -33322,6 +33322,7 @@ var Answer = _react2.default.createClass({
 
 
     var inputs = document.querySelectorAll('input:checked');
+    console.log('inputs', inputs);
     this.computeResults(inputs, dispatch);
 
     // this unchecks the previously checked inputs
@@ -33880,14 +33881,14 @@ var AnswerForm = _react2.default.createClass({
     };
 
     var optionRender = function optionRender() {
-      return [0, 1, 2, 3].map(function (each) {
+      return ['w', 'x', 'y', 'z'].map(function (each, index) {
         return _react2.default.createElement(
           'div',
           { key: each },
           _react2.default.createElement(
             'label',
             null,
-            inputRenderers(each.toString(), each)
+            inputRenderers(each, index)
           )
         );
       });

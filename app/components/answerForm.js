@@ -24,10 +24,10 @@ var AnswerForm = React.createClass({
         </div>)
       ]
 
-    const optionRender = () => [0, 1, 2, 3].map((each) => 
+    const optionRender = () => ['w', 'x', 'y', 'z'].map((each, index) => 
       <div key={each}>
         <label>
-          {inputRenderers(each.toString(), each)}
+          {inputRenderers(each, index)}
         </label>
       </div> 
     )

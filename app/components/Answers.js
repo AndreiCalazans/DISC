@@ -17,6 +17,7 @@ var Answer = React.createClass({
     var {dispatch , index } = this.props;
 
     var inputs = document.querySelectorAll('input:checked');
+    console.log('inputs', inputs);
     this.computeResults(inputs , dispatch );
 
 // this unchecks the previously checked inputs
