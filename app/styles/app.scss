@@ -7,12 +7,30 @@
 @include foundation-everything;
 @import 'components/Landing';
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+
 // @import 'components/progressBar';
 // Components
 * , *:before , *:after {
   margin: 0;
 
 }
+
+ol.legend {
+  padding: 30px;
+  li, p {
+    text-align: left;
+  }
+
+}
+
+.top-bar-title {
+  p {
+    margin: 0;
+  }
+}
+
 .top-bar {
    box-shadow: 2px 0px 6px 1px rgba(0,0,0,0.5);
   z-index: 1;
@@ -53,6 +71,9 @@
     box-sizing: border-box;
     p {
       padding: 1rem;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
     }
   }
   div:nth-child(2) {
@@ -60,22 +81,34 @@
     display:flex;
     box-sizing: border-box;
     p {
+      font-family: 'Roboto', sans-serif;
       width: 25%;
       flex-grow: 1;
       padding:1rem;
-      font-size: 10px;
+      font-size: 16px;
+      font-weight: 700;
       overflow: visible;
+      word-wrap: break-word;
     }
   }
 }
 .card {
   margin: 20px;
   box-shadow: 0 1px 4px 0px rgba(0,0,0,0.5);
+  img {
+    max-width: 200px;
+    align-self: center;
+  }
 }
 .answerContainer {
   display:flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
+  
+
+  .button {
+    margin-right: 30px;
+  }
 
   div {
     width:100%;
@@ -88,16 +121,27 @@
     align-items: center;
     p {
       box-sizing: border-box;
-      width: 45%;
+      width: 30%;
       padding: 1rem;
-      font-size: 10px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+    .inputWrapper {
+      background-color: transparent;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      input {
+        margin: 0;
+      }
     }
   }
-  label input {
-    box-sizing: border-box;
-    width: 25%;
-    flex-grow: 1;
-    padding:1rem;
+  // label input {
+  //   box-sizing: border-box;
+  //   width: 25%;
+  //   flex-grow: 1;
+  //   padding:1rem;
 
-  }
+  // }
 }

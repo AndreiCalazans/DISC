@@ -16,57 +16,41 @@ var AnswerForm = React.createClass({
         return <input type='submit' className="button" value='Proxima questão'/>;
       }
     };
+
+    const inputRenderers = (name, questionIndex) => [
+        <p key='title'>{questions[index].subQuestions[questionIndex]}</p>,
+        ...[1, 2, 3, 4].map(each => <div key={each} className='inputWrapper'>
+          <input required type="radio" name={name} value={each}/>
+        </div>)
+      ]
+
+    const optionRender = () => [0, 1, 2, 3].map((each) => 
+      <div key={each}>
+        <label>
+          {inputRenderers(each.toString(), each)}
+        </label>
+      </div> 
+    )
+
     return (
       <div>
-
+        <ol className='legend'>
+          <p>Legenda:</p>
+          <li>Raramente</li>
+          <li>Ocasionalmente</li>
+          <li>Mutas vezes</li>
+          <li>Maioria das vezes</li>
+        </ol>
         <div className='questionContainer'>
           <div>
             <p>{questions[index].mainQuestion}</p>
           </div>
           <div>
-            <p>raramente</p>
-            <p>ocasionalmente</p>
-            <p>Muitas vezes</p>
-            <p>Maioria da vezes</p>
+            {[1, 2, 3, 4].map(each => <p>{each}</p>)}
           </div>
-      </div>
-        <form onSubmit={handleValues}   className="answerContainer">
-          <div>
-            <label  htmlFor="firstQuestion">
-              <p>{questions[index].subQuestions[0]}</p>
-                <input required type="radio" name='w' value='1' />
-                <input required type="radio" name='w' value='2' />
-                <input required type="radio" name='w' value='3' />
-                <input required type="radio" name='w' value='4' />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="">
-                <p>{questions[index].subQuestions[1]}</p>
-                <input required type="radio" name='x' value='1' />
-                <input required type="radio" name='x' value='2' />
-                <input required type="radio" name='x' value='3' />
-                <input required type="radio" name='x' value='4' />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="">
-                <p>{questions[index].subQuestions[2]}</p>
-                <input required type="radio" name='y' value='1' />
-                <input required type="radio" name='y' value='2' />
-                <input required type="radio" name='y' value='3' />
-                <input required type="radio" name='y' value='4' />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="">
-                <p>{questions[index].subQuestions[3]}</p>
-                <input required type="radio" name='z' value='1' />
-                <input required type="radio" name='z' value='2' />
-                <input required type="radio" name='z' value='3' />
-                <input required type="radio" name='z' value='4' />
-            </label>
-          </div>
+        </div>
+        <form onSubmit={handleValues}  className="answerContainer">
+        {optionRender()}
             {renderButton()}
         </form>
       </div>
