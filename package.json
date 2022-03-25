@@ -2,9 +2,13 @@
   "name": "BoilerPlate",
   "version": "1.0.0",
   "description": "",
+  "engines" : { 
+    "node" : ">=8.0.0 <=9.0.0" 
+  },
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w && nodemon server",
+    "compile": "webpack -w",
+    "start": "nodemon server.js",
     "test": "karma start"
   },
   "author": "",
@@ -35,7 +39,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
     "react-addons-test-utils": "^15.4.2",
     "react-redux": "^5.0.3",
