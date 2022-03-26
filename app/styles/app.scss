@@ -178,3 +178,11 @@ ol.legend {
     width: 100%;
   }
 }
+
+.result {
+  > table {
+    margin: auto;
+    max-width: 550px;
+  }
+
+}
