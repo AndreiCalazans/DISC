@@ -171,7 +171,7 @@ export var Disc = React.createClass({
           return (
             <div className="card" key={key}>
               <div className="card-divider" style={{ flexDirection: 'column' }}>
-                <h4>{DISC[key].name}</h4>
+                <h2>{DISC[key].name}</h2>
                 <p><i>{DISC[key].tags}</i></p>
               </div>
               <div className="card-section">

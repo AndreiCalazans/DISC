@@ -49,6 +49,9 @@ ol.legend {
   }
 }
 
+
+
+
 .menu li a {
   color: white;
 }
@@ -80,10 +83,19 @@ ol.legend {
 .card {
   margin: 20px;
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
-  img {
-    max-width: 200px;
-    align-self: center;
+}
+
+.card-divider {
+  padding: 15px;
+  // NOT IDEAL BUT WHO CARES
+  >:nth-child(1) {
+    margin-bottom: 15px;
   }
+}
+
+.card-section {
+  background: white;
+  padding: 15px;
 }
 
 .buttonContainer {
