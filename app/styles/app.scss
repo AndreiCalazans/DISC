@@ -1,9 +1,9 @@
-@import "base/variables";
+// @import "base/variables";
 
 //Foundation
-@import "base/foundation-settings";
-@import "foundation";
-@include foundation-everything;
+// @import "base/foundation-settings";
+// @import "foundation";
+// @include foundation-everything;
 @import "components/Landing";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
@@ -28,26 +28,24 @@ ol.legend {
   }
 }
 
-.top-bar-title {
-  p {
-    margin: 0;
-  }
-}
-
 .top-bar {
   box-shadow: 2px 0px 6px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
   position: relative;
   background-color: #00796b;
   color: white;
-}
-.top-bar .top-bar-left {
   width: auto;
-}
-.top-bar-left {
-  float: none;
   ul {
-    background-color: #00796b;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
 

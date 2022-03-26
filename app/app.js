@@ -9,11 +9,6 @@ import Disc from 'Disc';
 
 var store = require('./store/configureStore').configure();
 
-
-//Load foundations-sites
-// require("foundation-sites/dist/css/foundation.min.css");
-$(document).foundation();
-
 //App css
 require('app.scss');
 
