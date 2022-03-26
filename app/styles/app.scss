@@ -80,6 +80,7 @@ ol.legend {
   }
 }
 
+
 .card {
   margin: 20px;
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
@@ -194,5 +195,10 @@ ol.legend {
     margin: auto;
     max-width: 550px;
   }
+}
 
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

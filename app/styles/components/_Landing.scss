@@ -7,25 +7,33 @@
 .hero {
   width: 100%;
   postion: relative;
+  a {
+    text-decoration: none;
+  }
+  button {
+    padding: 10px 24px;
+    background: yellow;
+    border: none;
+    border-radius: 5px;
+  }
 }
 
+footer a {
+  text-decoration: none;
+  color: #1779ba;
+}
 
 .hero > .title {
   position: relative;
-
+  h1 {
+    font-size: 48px;
+    line-height: 67px;
+  }
 }
 
-.hero > .button {
-  position: relative;
-  margin: auto;
-  position: relative;
-  max-width: 120px;
-  height: 38px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background: yellow;
-}
-
-.button {
-  display: block !important;
+.callout {
+  background: white;
+  border: solid 1px rgba(10, 10, 10, 0.25);
+  padding: 15px;
+  margin: 15px 0;
 }
