@@ -6,8 +6,7 @@ var Question = React.createClass({
 
     return (
       <div className="row">
-          <Answers></Answers>
-
+        <Answers />
       </div>
     )
   }

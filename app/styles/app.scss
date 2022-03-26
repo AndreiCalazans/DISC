@@ -1,28 +1,31 @@
-@import 'base/variables';
-
+@import "base/variables";
 
 //Foundation
-@import 'base/foundation-settings';
-@import 'foundation';
+@import "base/foundation-settings";
+@import "foundation";
 @include foundation-everything;
-@import 'components/Landing';
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-
+@import "components/Landing";
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
 // @import 'components/progressBar';
 // Components
-* , *:before , *:after {
+*,
+*:before,
+*:after {
   margin: 0;
+}
 
+body {
+  background-color: #efefef;
 }
 
 ol.legend {
   padding: 30px;
-  li, p {
+  li,
+  p {
     text-align: left;
   }
-
 }
 
 .top-bar-title {
@@ -32,20 +35,20 @@ ol.legend {
 }
 
 .top-bar {
-   box-shadow: 2px 0px 6px 1px rgba(0,0,0,0.5);
+  box-shadow: 2px 0px 6px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
   position: relative;
-  background-color: #00796B;
-  color:white;
+  background-color: #00796b;
+  color: white;
 }
 .top-bar .top-bar-left {
   width: auto;
 }
 .top-bar-left {
-  float:none;
+  float: none;
   ul {
-    background-color: #00796B;
-    }
+    background-color: #00796b;
+  }
 }
 
 .menu li a {
@@ -55,93 +58,123 @@ ol.legend {
   font-weight: bold;
 }
 
+.row {
+  padding-top: 10px;
+}
 
 .mainContainer {
   position: relative;
-  z-index:1;
+  z-index: 1;
   margin: 20px;
 }
 .questionContainer {
   display: flex;
   align-items: center;
 
-
-  div:nth-child(1) {
-    width: 30%;
-    box-sizing: border-box;
-    p {
-      padding: 1rem;
-      font-size: 16px;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-    }
-  }
-  div:nth-child(2) {
-    width: 70%;
-    display:flex;
-    box-sizing: border-box;
-    p {
-      font-family: 'Roboto', sans-serif;
-      width: 25%;
-      flex-grow: 1;
-      padding:1rem;
-      font-size: 16px;
-      font-weight: 700;
-      overflow: visible;
-      word-wrap: break-word;
-    }
+  p {
+    padding: 1rem;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
   }
 }
+
 .card {
   margin: 20px;
-  box-shadow: 0 1px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
   img {
     max-width: 200px;
     align-self: center;
   }
 }
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  > .button {
+    margin: 0;
+  }
+}
+
 .answerContainer {
-  display:flex;
+  // background-color: #efefef;
+  display: flex;
   align-items: flex-end;
   flex-direction: column;
-  
+  margin: auto;
+  max-width: 750px;
 
-  .button {
-    margin-right: 30px;
-  }
-
-  div {
-    width:100%;
-  }
-  div:nth-child(1) , div:nth-child(3) {
-    background-color: #efefef;
-  }
-  label {
-    display: flex;
-    align-items: center;
+  .legend {
+    padding: 10px;
     p {
-      box-sizing: border-box;
-      width: 30%;
-      padding: 1rem;
-      font-size: 16px;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-    }
-    .inputWrapper {
-      background-color: transparent;
-      flex: 1;
-      align-items: center;
-      justify-content: center;
-      input {
-        margin: 0;
+      display: inline-block;
+      padding: 2px 15px;
+      margin: 0;
+      border-radius: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+
+      &:nth-child(1) {
+        background: #973287;
+      }
+
+      &:nth-child(2) {
+        background: #40a33b;
+      }
+
+      &:nth-child(3) {
+        background: #e85110;
+      }
+
+      &:nth-child(4) {
+        background: #1279b6;
       }
     }
   }
-  // label input {
-  //   box-sizing: border-box;
-  //   width: 25%;
-  //   flex-grow: 1;
-  //   padding:1rem;
 
-  // }
+  .question-table {
+    background-color: white;
+    margin-bottom: 0;
+    p {
+      text-align: left;
+    }
+
+    td:nth-child(1) {
+      padding: 20px 0 20px 20px;
+      width: 43%;
+    }
+
+    label {
+      display: table-cell;
+      vertical-align: middle;
+      input {
+        margin: auto;
+      }
+
+      &:nth-child(2) {
+        background: #973287;
+      }
+
+      &:nth-child(3) {
+        background: #40a33b;
+      }
+
+      &:nth-child(4) {
+        background: #e85110;
+      }
+
+      &:nth-child(5) {
+        background: #1279b6;
+      }
+    }
+  }
+
+  div {
+    width: 100%;
+  }
 }

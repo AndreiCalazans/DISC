@@ -5,13 +5,10 @@ var Main = React.createClass({
     return (
       <div>
         <div className="top-bar">
-          <div className="top-bar-title">
-            <p>DISC</p>
-          </div>
           <div className="top-bar-left ">
             <ul className='menu'>
               <li>
-                <Link to='/'>Home</Link>
+                <Link to='/'>DISC</Link>
               </li>
               <li>
                 <Link to='/questions'>Teste</Link>

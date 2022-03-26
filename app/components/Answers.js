@@ -1,62 +1,68 @@
-import React from 'react';
-import {Link} from 'react-router';
-import {connect} from 'react-redux';
-import AnswerForm from 'answerForm';
-import * as actions from '../actions/actions';
-import {questions} from '../database/questionDb';
+import React from "react";
+import { connect } from "react-redux";
+import AnswerForm from "answerForm";
+import Result from "Result";
 
-var dispatch ;
-import Result from 'Result';
+import * as actions from "../actions/actions";
+import { questions } from "../database/questionDb";
 
-
-
+function checkForDuplicates(array) {
+  return new Set(array).size !== array.length;
+}
 
 var Answer = React.createClass({
-  handleValues: function (e) {
+  handleValues: function(e) {
     e.preventDefault();
-    var {dispatch , index } = this.props;
+    var { dispatch } = this.props;
 
-    var inputs = document.querySelectorAll('input:checked');
-    console.log('inputs', inputs);
-    this.computeResults(inputs , dispatch );
+    var inputs = document.querySelectorAll("input:checked");
 
-// this unchecks the previously checked inputs
-    inputs.forEach((input) => {
+
+    inputs.forEach(input => {
+      // add the value of the result of each selected input to the state
+      console.log(input.name, input.value);
+    });
+
+    if (
+      checkForDuplicates(
+        Array.from(inputs.entries()).map((entry) => entry[1].value)
+      )
+    ) {
+      alert(
+        "Não é permitido selecionar a mesma frequência mais de uma vez por pergunta"
+      );
+      return;
+    }
+
+    this.computeResults(inputs, dispatch);
+
+    // this unchecks the previously checked inputs
+    inputs.forEach(input => {
       input.checked = false;
     });
     dispatch(actions.nextPage());
   },
-  computeResults: function (inputs, dispatch) {
-    inputs.forEach( (input) => {
+  computeResults: function(inputs, dispatch) {
+    inputs.forEach(input => {
       // add the value of the result of each selected input to the state
-    dispatch(actions.addResult(input.name , input.value));
+      console.log(input.name, input.value);
+      dispatch(actions.addResult(input.name, input.value));
     });
-
   },
-  render: function () {
-    var {index} = this.props;
-    var that = this
+  render: function() {
+    var { index } = this.props;
+    var that = this;
     function renderBody() {
-      if(index === questions.length) {
-        return <Result></Result>
+      if (index === questions.length) {
+        return <Result />;
       } else {
-        return <AnswerForm handleValues={that.handleValues} ></AnswerForm>
+        return <AnswerForm handleValues={that.handleValues} />;
       }
-    };
-    return (
-      <div className="answer">
-        <div id='progressBar'>
-          {index+'/15'}
-        </div>
-        {renderBody()}
-      </div>
-    )
+    }
+    return <div className="answer">{renderBody()}</div>;
   }
 });
 
-
-export default connect(
-  (state) => {
-    return state;
-  }
-)(Answer);
+export default connect(state => {
+  return state;
+})(Answer);
