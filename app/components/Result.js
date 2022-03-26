@@ -11,12 +11,7 @@ export const Result = React.createClass({
     new Chart(ctx, {
       type: "radar",
       data: {
-        labels: [
-          "(D)",
-          "(I)",
-          "(S)",
-          "(C)"
-        ],
+        labels: ["(D)", "(I)", "(S)", "(C)"],
         datasets: [
           {
             data: data
@@ -71,8 +66,7 @@ export const Result = React.createClass({
 
       return (
         <h1>
-          Você é um{" "}
-          <span style={{ color: "red" }}> {upperCaseAnswer}</span>
+          Você é um <span style={{ color: "red" }}> {upperCaseAnswer}</span>
         </h1>
       );
     };
@@ -87,7 +81,7 @@ export const Result = React.createClass({
             <td>C = {z}</td>
           </tr>
         </table>
-        <div >
+        <div>
           <canvas ref="myChart" id="myChart" width="400" height="400" />
         </div>
         <div>

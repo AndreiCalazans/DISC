@@ -8,9 +8,9 @@ var Home = React.createClass({
           <div className="title">
             <h1>Aprenda sobre o seu comportamento fazendo o DISC</h1>
           </div>
-            <Link className="centered" to="/questions">
-              <button>Faça o teste</button>
-            </Link>
+          <Link className="centered" to="/questions">
+            <button>Faça o teste</button>
+          </Link>
         </div>
         <div className="callout">
           <p>

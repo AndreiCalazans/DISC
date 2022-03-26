@@ -1,17 +1,13 @@
-
-
-
-
 export var nextPage = () => {
   return {
-    type: 'NEXT_QUESTION'
-  }
-}
+    type: "NEXT_QUESTION"
+  };
+};
 
-export var addResult = (letter , value) => {
+export var addResult = (letter, value) => {
   return {
-    type: 'ADD_RESULT',
+    type: "ADD_RESULT",
     letter,
     value
-  }
-}
+  };
+};

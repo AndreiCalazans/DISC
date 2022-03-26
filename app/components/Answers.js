@@ -17,7 +17,6 @@ var Answer = React.createClass({
 
     var inputs = document.querySelectorAll("input:checked");
 
-
     inputs.forEach(input => {
       // add the value of the result of each selected input to the state
       console.log(input.name, input.value);
@@ -25,7 +24,7 @@ var Answer = React.createClass({
 
     if (
       checkForDuplicates(
-        Array.from(inputs.entries()).map((entry) => entry[1].value)
+        Array.from(inputs.entries()).map(entry => entry[1].value)
       )
     ) {
       alert(

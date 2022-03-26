@@ -170,9 +170,11 @@ export var Disc = React.createClass({
         {Object.keys(DISC).map(key => {
           return (
             <div className="card" key={key}>
-              <div className="card-divider" style={{ flexDirection: 'column' }}>
+              <div className="card-divider" style={{ flexDirection: "column" }}>
                 <h2>{DISC[key].name}</h2>
-                <p><i>{DISC[key].tags}</i></p>
+                <p>
+                  <i>{DISC[key].tags}</i>
+                </p>
               </div>
               <div className="card-section">
                 <p>{DISC[key].description}</p>
