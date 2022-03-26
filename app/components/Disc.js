@@ -169,7 +169,7 @@ export var Disc = React.createClass({
       <div>
         {Object.keys(DISC).map(key => {
           return (
-            <div className="card">
+            <div className="card" key={key}>
               <div className="card-divider" style={{ flexDirection: 'column' }}>
                 <h4>{DISC[key].name}</h4>
                 <p><i>{DISC[key].tags}</i></p>
