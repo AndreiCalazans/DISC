@@ -49,7 +49,7 @@ var AnswerForm = React.createClass({
           <table className="question-table">
             <tbody>{optionRender()}</tbody>
           </table>
-          <div className="legend">
+          <div className="legend centered">
             <p>Raramente</p>
             <p>Ocasionalmente</p>
             <p>Muitas vezes</p>

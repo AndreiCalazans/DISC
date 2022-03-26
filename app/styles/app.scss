@@ -5,6 +5,7 @@
 // @import "foundation";
 // @include foundation-everything;
 @import "components/Landing";
+@import "components/Quiz";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
@@ -14,19 +15,13 @@
 *:before,
 *:after {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #efefef;
 }
 
-ol.legend {
-  padding: 30px;
-  li,
-  p {
-    text-align: left;
-  }
-}
 
 .top-bar {
   box-shadow: 2px 0px 6px 1px rgba(0, 0, 0, 0.5);
@@ -68,17 +63,6 @@ ol.legend {
   z-index: 1;
   margin: 20px;
 }
-.questionContainer {
-  display: flex;
-  align-items: center;
-
-  p {
-    padding: 1rem;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-  }
-}
 
 
 .card {
@@ -99,97 +83,6 @@ ol.legend {
   padding: 15px;
 }
 
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  > .button {
-    margin: 0;
-  }
-}
-
-.answerContainer {
-  // background-color: #efefef;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  margin: auto;
-  max-width: 750px;
-
-  .legend {
-    padding: 10px;
-    p {
-      display: inline-block;
-      padding: 2px 15px;
-      margin: 0;
-      border-radius: 10px;
-      margin-right: 10px;
-      font-size: 12px;
-      font-weight: bold;
-      color: white;
-
-      &:nth-child(1) {
-        background: #973287;
-      }
-
-      &:nth-child(2) {
-        background: #40a33b;
-      }
-
-      &:nth-child(3) {
-        background: #e85110;
-      }
-
-      &:nth-child(4) {
-        background: #1279b6;
-      }
-    }
-  }
-
-  .question-table {
-    background-color: white;
-    margin-bottom: 0;
-    p {
-      text-align: left;
-    }
-
-    td:nth-child(1) {
-      padding: 20px 0 20px 20px;
-      width: 43%;
-    }
-
-    label {
-      display: table-cell;
-      vertical-align: middle;
-      input {
-        margin: auto;
-      }
-
-      &:nth-child(2) {
-        background: #973287;
-      }
-
-      &:nth-child(3) {
-        background: #40a33b;
-      }
-
-      &:nth-child(4) {
-        background: #e85110;
-      }
-
-      &:nth-child(5) {
-        background: #1279b6;
-      }
-    }
-  }
-
-  div {
-    width: 100%;
-  }
-}
-
 .result {
   > table {
     margin: auto;
@@ -201,4 +94,5 @@ ol.legend {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
