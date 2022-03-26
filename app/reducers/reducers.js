@@ -3,7 +3,7 @@
 
 
 
-export var questionIndexReducer = (state = 0 , action) => {
+export var questionIndexReducer = (state = 15 , action) => {
   switch (action.type) {
     case 'NEXT_QUESTION':
       return state + 1;
@@ -14,10 +14,10 @@ export var questionIndexReducer = (state = 0 , action) => {
 };
 
 var resultState = {
-  w: 0,
-  x: 0,
-  y: 0,
-  z: 0
+  w: 30,
+  x: 49,
+  y: 38,
+  z: 33
 };
 
 export var resultsReducer = (state = resultState, action) => {

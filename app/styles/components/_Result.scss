@@ -1,0 +1,24 @@
+
+.result {
+  > h1 {
+    margin-bottom: 15px;
+  }
+
+    > table {
+    margin-bottom: 15px;
+    width: 100%;
+    margin: auto;
+    max-width: 550px;
+  }
+  div {
+    margin-top: 25px;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1779ba;
+  }
+}
+

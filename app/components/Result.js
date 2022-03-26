@@ -77,7 +77,7 @@ export const Result = React.createClass({
       );
     };
     return (
-      <div className="result">
+      <div className="result centered column">
         {calculateDisc()}
         <table>
           <tr>
@@ -87,7 +87,7 @@ export const Result = React.createClass({
             <td>C = {z}</td>
           </tr>
         </table>
-        <div style={{ maxWidth: 400, maxHeight: 400, margin: "auto" }}>
+        <div >
           <canvas ref="myChart" id="myChart" width="400" height="400" />
         </div>
         <div>

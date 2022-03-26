@@ -6,6 +6,7 @@
 // @include foundation-everything;
 @import "components/Landing";
 @import "components/Quiz";
+@import "components/Result";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
@@ -83,16 +84,13 @@ body {
   padding: 15px;
 }
 
-.result {
-  > table {
-    margin: auto;
-    max-width: 550px;
-  }
-}
-
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
 }
