@@ -11,6 +11,8 @@
     text-decoration: none;
   }
   button {
+    font-size: 1.5rem;
+    font-weight: bold;
     padding: 10px 24px;
     background: yellow;
     border: none;
@@ -26,8 +28,8 @@ footer a {
 .hero > .title {
   position: relative;
   h1 {
-    font-size: 48px;
-    line-height: 67px;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 }
 
