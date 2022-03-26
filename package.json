@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "webpack -w",
+    "compile:prod": "webpack -p --env=production",
     "start": "nodemon server.js"
   },
   "author": "",
