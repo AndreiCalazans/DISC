@@ -1,2 +1,5 @@
 node_modules/
-public/bundle.js
+dist/
+.vercel
+.DS_Store
+*.log
