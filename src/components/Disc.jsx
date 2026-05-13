@@ -163,23 +163,45 @@ export const DISC = {
   },
 };
 
+function badgeLetter(key) {
+  // Use first non-space character as the family color (D / I / S / C).
+  const first = key.trim().charAt(0).toUpperCase();
+  return ["D", "I", "S", "C"].includes(first) ? first : "D";
+}
+
 function Disc() {
   return (
-    <div>
-      {Object.keys(DISC).map((key) => (
-        <div className="card" key={key}>
-          <div className="card-divider" style={{ flexDirection: "column" }}>
-            <h2>{DISC[key].name}</h2>
-            <p>
-              <i>{DISC[key].tags}</i>
-            </p>
-          </div>
-          <div className="card-section">
-            <p>{DISC[key].description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+    <>
+      <header className="types-header">
+        <h1>Os perfis comportamentais</h1>
+        <p>
+          Cada combinação de Dominância (D), Influência (I), Estabilidade (S)
+          e Conformidade (C) gera um padrão característico. Explore os perfis
+          abaixo.
+        </p>
+      </header>
+
+      <div className="types-grid">
+        {Object.keys(DISC).map((key) => {
+          const item = DISC[key];
+          const letter = badgeLetter(key);
+          return (
+            <article className="type-card" key={key}>
+              <div className="type-card__head">
+                <span className="type-badge" data-letter={letter} aria-hidden="true">
+                  {letter}
+                </span>
+                <div>
+                  <div className="type-card__name">{item.name}</div>
+                  <div className="type-card__tags">{item.tags}</div>
+                </div>
+              </div>
+              <p className="type-card__desc">{item.description}</p>
+            </article>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
